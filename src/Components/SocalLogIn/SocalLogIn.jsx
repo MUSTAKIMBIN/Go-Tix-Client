@@ -3,7 +3,7 @@ import React from "react";
 const SocalLogIn = () => {
   return (
     <div>
-      <button className="btn bg-white text-black border-[#e5e5e5]">
+      <button className="btn w-full bg-white text-black border-[#e5e5e5]">
         <svg
           aria-label="Google logo"
           width="16"
