@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router";
+import { Link, NavLink } from "react-router";
 import Logo from "../Logo/Logo";
 
 const Navber = () => {
@@ -49,7 +49,12 @@ const Navber = () => {
         <ul className="menu menu-horizontal px-1">{links}</ul>
       </div>
       <div className="navbar-end">
-        <a className="btn">Button</a>
+        <Link to={"/logIn"}>
+          <button className="btn">LogIN</button>
+        </Link>
+        <Link to={"/register"}>
+          <button className="btn ml-2">Register</button>
+        </Link>
       </div>
     </div>
   );
