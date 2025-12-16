@@ -1,9 +1,26 @@
-import React from "react";
+import React, { useContext } from "react";
+import { AuthContext } from "../../Contex/AuthContext/AuthContext";
+import toast from "react-hot-toast";
 
 const SocalLogIn = () => {
+  const { googleLogin } = useContext(AuthContext);
+  const handleGoogleSignIn = () => {
+    googleLogin()
+      .then((res) => {
+        console.log(res.user);
+        toast.success("LogIn Successfull");
+      })
+      .catch((err) => {
+        console.log(err.message);
+        toast.error("LogIn Failed");
+      });
+  };
   return (
     <div>
-      <button className="btn w-full bg-white text-black border-[#e5e5e5]">
+      <button
+        onClick={handleGoogleSignIn}
+        className="btn w-full bg-white text-black border-[#e5e5e5]"
+      >
         <svg
           aria-label="Google logo"
           width="16"
