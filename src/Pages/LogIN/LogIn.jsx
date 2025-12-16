@@ -1,9 +1,10 @@
 import React from "react";
 import SocalLogIn from "../../Components/SocalLogIn/SocalLogIn";
+import { Link } from "react-router";
 
 const LogIn = () => {
   return (
-    <div className="hero bg-base-200 min-h-screen">
+    <div className="hero bg-base-200 min-h-[90vh]">
       <div className="hero-content flex-col ">
         <div className="text-center ">
           <h1 className="text-5xl font-bold">Login now!</h1>
@@ -25,6 +26,12 @@ const LogIn = () => {
                 </div>
                 <button className="btn btn-neutral w-full mt-4">Login</button>
               </fieldset>
+              <Link to={`/register`}>
+                <p className="text-xs font-semibold my-2">
+                  Don't have an account?{" "}
+                  <span className="text-blue-700">Please Rgister.</span>
+                </p>
+              </Link>
             </form>
             <div className="divider">OR</div>
             <SocalLogIn></SocalLogIn>
